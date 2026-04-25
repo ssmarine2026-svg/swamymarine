@@ -68,18 +68,14 @@ img {
   gap: 12px;
 }
 
-.brand-mark {
+.brand-logo {
   display: grid;
   width: 46px;
   height: 46px;
-  place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.34);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.12);
-  color: var(--aqua);
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  object-fit: contain;
 }
 
 .brand strong,
@@ -753,7 +749,7 @@ textarea:focus {
     display: none;
   }
 
-  .brand-mark {
+  .brand-logo {
     width: 42px;
     height: 42px;
   }
