@@ -46,3 +46,52 @@ if ("IntersectionObserver" in window) {
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
+
+/* HERO PARALLAX EFFECT */
+
+const heroImage = document.querySelector(".hero-media img");
+
+window.addEventListener("scroll", () => {
+  const scrolled = window.pageYOffset;
+
+  if (heroImage) {
+    heroImage.style.transform =
+      `translateY(${scrolled * 0.25}px) scale(1.08)`;
+  }
+});
+
+/* SURVEY COUNTER */
+
+const counter = document.getElementById("surveyCount");
+
+let started = false;
+
+window.addEventListener("scroll", () => {
+
+  if (counter && !started) {
+
+    const pos = counter.getBoundingClientRect().top;
+
+    if (pos < window.innerHeight) {
+
+      started = true;
+
+      let count = 0;
+
+      const interval = setInterval(() => {
+
+        count += 10;
+
+        counter.innerText = count + "+";
+
+        if (count >= 500) {
+          clearInterval(interval);
+        }
+
+      }, 20);
+
+    }
+
+  }
+
+});
