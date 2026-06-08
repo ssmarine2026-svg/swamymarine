@@ -113,3 +113,25 @@ window.addEventListener("scroll", ()=>{
  });
 
 });
+
+const points = document.querySelectorAll(".point");
+
+window.addEventListener("scroll",()=>{
+
+points.forEach((point,index)=>{
+
+const pos = point.getBoundingClientRect().top;
+
+if(pos < window.innerHeight-100){
+
+setTimeout(()=>{
+
+point.classList.add("active");
+
+},index*300);
+
+}
+
+});
+
+});
