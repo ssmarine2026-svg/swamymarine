@@ -6,56 +6,58 @@
 
 <title>Container Survey Services | Swamy Marine Services</title>
 
-<meta name="description" content="Professional container survey services in Navi Mumbai, JNPT, Nhava Sheva and Dighi Port.">
+<meta name="description" content="Professional Container Survey Services in Navi Mumbai, JNPT, Nhava Sheva and Dighi Port.">
 
 <link rel="stylesheet" href="styles.css">
 
 <style>
 
-.service-hero{
-background:
-linear-gradient(
-rgba(4,29,42,.80),
-rgba(4,29,42,.80)
-),
-url('assets/Servicesimg.png');
+.banner-section{
+padding:120px 50px 60px;
+}
 
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
+.banner-section img{
+width:100%;
+border-radius:20px;
+box-shadow:0 25px 60px rgba(0,0,0,.25);
+}
 
-min-height:85vh;
+.location-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:50px;
+}
 
-display:flex;
-align-items:center;
-
-padding:180px 80px 120px;
-
+.location-card{
+background:#05293a;
 color:white;
+padding:35px;
+border-radius:18px;
+transition:.4s;
+box-shadow:0 15px 35px rgba(0,0,0,.12);
 }
 
-.service-hero h1{
-font-size:clamp(3rem,6vw,5rem);
-max-width:900px;
-line-height:1.1;
-margin-bottom:20px;
+.location-card:hover{
+transform:translateY(-10px);
 }
 
-.service-hero p{
-max-width:850px;
-font-size:22px;
-line-height:1.7;
-color:rgba(255,255,255,.9);
+.location-card h3{
+margin-bottom:15px;
+color:#f4c14b;
 }
 
-.service-hero .btn{
-margin-right:15px;
-margin-top:20px;
+.process-card{
+background:#ffffff;
+padding:25px;
+margin:20px 0;
+border-left:5px solid #0a8793;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
 }
 
 .map-section{
 padding:100px 50px;
-background:white;
 }
 
 .map-section h2{
@@ -68,18 +70,17 @@ text-align:center;
 margin-bottom:40px;
 }
 
-.survey-process{
-padding:0;
+.cta-box{
+background:#05293a;
+padding:60px;
+border-radius:20px;
+text-align:center;
+color:white;
 }
 
-.survey-process li{
-list-style:none;
-padding:20px;
-margin:15px 0;
-background:#f5f5f5;
-border-left:5px solid #0a8793;
-border-radius:8px;
-font-size:18px;
+.cta-box h2{
+color:white;
+margin-bottom:20px;
 }
 
 </style>
@@ -96,76 +97,56 @@ Swamy Marine Services
 
 </header>
 
-<section class="service-hero">
+<section class="banner-section">
 
-<div>
+<img
+src="assets/Servicesimg.png"
+alt="Container Survey Services">
 
-<p class="eyebrow">
-Container Survey • Inspection • Reporting
-</p>
+</section>
+
+<section class="section">
 
 <h1>
-Container Survey Services Across India
+Container Survey Services in Navi Mumbai, JNPT & Dighi Port
 </h1>
 
 <p>
-Swamy Marine Services (OPC) Private Limited provides professional container survey services, container inspection services, container damage assessment and reporting support across Navi Mumbai, JNPT, Nhava Sheva, Dighi Port and major ports across India.
-</p>
-
-<a href="https://wa.me/919870788123" class="btn primary">
-Request Survey
-</a>
-
-<a href="index.html" class="btn ghost">
-Back To Home
-</a>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>
-Container Survey Services in Navi Mumbai, JNPT & Dighi Port
-</h2>
-
-<p>
-Swamy Marine Services provides professional container survey services for shipping lines, logistics companies, container operators and cargo owners.
+Swamy Marine Services (OPC) Private Limited provides professional container survey services, container inspection services, container damage assessment and detailed reporting support for shipping lines, logistics companies, container operators and cargo owners.
 </p>
 
 <p>
-Our survey team conducts detailed inspections including CSC verification, structural condition assessment, damage reporting, roof inspection, floor inspection, side wall inspection, door inspection and locking gear verification.
+Our survey team conducts comprehensive inspections including CSC verification, structural condition assessment, roof inspection, floor inspection, side wall inspection, door inspection and locking gear verification.
 </p>
 
 </section>
 
 <section class="section">
 
-<h2>
-Service Locations
+<h2 style="text-align:center;">
+Coverage Areas
 </h2>
 
-<div class="service-grid">
+<div class="location-grid">
 
-<div class="service-card">
-<h3>JNPT Port</h3>
+<div class="location-card">
+<h3>⚓ JNPT Port</h3>
 <p>Container Survey & Inspection Services</p>
 </div>
 
-<div class="service-card">
-<h3>Nhava Sheva</h3>
-<p>Container Damage Assessment</p>
+<div class="location-card">
+<h3>🚢 Nhava Sheva</h3>
+<p>Damage Assessment & Reporting</p>
 </div>
 
-<div class="service-card">
-<h3>Dighi Port</h3>
-<p>Container Survey Services</p>
+<div class="location-card">
+<h3>📦 Dighi Port</h3>
+<p>Container Condition Surveys</p>
 </div>
 
-<div class="service-card">
-<h3>Navi Mumbai</h3>
-<p>Inspection & Reporting Services</p>
+<div class="location-card">
+<h3>🏢 Navi Mumbai</h3>
+<p>Inspection Support Services</p>
 </div>
 
 </div>
@@ -178,23 +159,33 @@ Service Locations
 Our Container Survey Process
 </h2>
 
-<ul class="survey-process">
+<div class="process-card">
+✔ Container Number Verification
+</div>
 
-<li>✔ Container Number Verification</li>
+<div class="process-card">
+✔ CSC Plate Inspection
+</div>
 
-<li>✔ CSC Plate Inspection</li>
+<div class="process-card">
+✔ External Damage Assessment
+</div>
 
-<li>✔ External Damage Assessment</li>
+<div class="process-card">
+✔ Roof & Side Wall Inspection
+</div>
 
-<li>✔ Roof & Side Wall Inspection</li>
+<div class="process-card">
+✔ Floor Inspection
+</div>
 
-<li>✔ Floor Inspection</li>
+<div class="process-card">
+✔ Door & Locking Gear Inspection
+</div>
 
-<li>✔ Door & Locking Gear Inspection</li>
-
-<li>✔ Final Survey Report Generation</li>
-
-</ul>
+<div class="process-card">
+✔ Final Survey Report Generation
+</div>
 
 </section>
 
@@ -212,7 +203,7 @@ Serving Navi Mumbai, JNPT, Nhava Sheva, Dighi Port and major ports across India.
 src="https://www.google.com/maps?q=JNPT%20Navi%20Mumbai&output=embed"
 width="100%"
 height="450"
-style="border:0;"
+style="border:0;border-radius:20px;"
 loading="lazy">
 </iframe>
 
@@ -224,29 +215,35 @@ loading="lazy">
 Frequently Asked Questions
 </h2>
 
-<h3>What is a Container Survey?</h3>
+<h3>
+What is a Container Survey?
+</h3>
 
 <p>
 A container survey is a detailed inspection of a shipping container to assess condition, structural integrity and operational suitability.
 </p>
 
-<h3>Why is Container Inspection Important?</h3>
+<h3>
+Why is Container Inspection Important?
+</h3>
 
 <p>
 Container inspection helps identify structural damage, repair requirements and operational risks before cargo movement.
 </p>
 
-<h3>Do You Provide Survey Services at JNPT?</h3>
+<h3>
+Do You Provide Survey Services at JNPT?
+</h3>
 
 <p>
-Yes. We provide container survey support at JNPT, Nhava Sheva, Dighi Port and other major locations across India.
+Yes. We provide container survey support at JNPT, Nhava Sheva, Dighi Port and major locations across India.
 </p>
 
 </section>
 
-<section class="contact-section">
+<section class="section">
 
-<div class="contact-copy">
+<div class="cta-box">
 
 <h2>
 Need a Container Survey?
@@ -256,8 +253,14 @@ Need a Container Survey?
 Contact Swamy Marine Services for professional container survey support and inspection services.
 </p>
 
-<a href="https://wa.me/919870788123" class="btn primary">
+<br>
+
+<a
+href="https://wa.me/919870788123"
+class="btn primary">
+
 WhatsApp Now
+
 </a>
 
 </div>
