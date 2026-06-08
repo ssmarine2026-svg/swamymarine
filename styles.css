@@ -875,6 +875,53 @@ opacity:1;
 transform:translateX(0);
 }
 
+.service-hero{
+
+background:
+linear-gradient(
+rgba(4,29,42,.80),
+rgba(4,29,42,.80)
+),
+url('assets/Servicesimg.png');
+
+background-size:cover;
+background-position:center;
+
+min-height:80vh;
+
+display:flex;
+align-items:center;
+
+padding:180px 80px 120px;
+
+color:white;
+
+}
+
+.service-hero h1{
+
+font-size:clamp(3rem,6vw,5rem);
+
+max-width:800px;
+
+margin-bottom:20px;
+
+line-height:1.1;
+
+}
+
+.service-hero p{
+
+max-width:800px;
+
+font-size:22px;
+
+line-height:1.7;
+
+color:rgba(255,255,255,.9);
+
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
