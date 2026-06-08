@@ -95,3 +95,21 @@ window.addEventListener("scroll", () => {
   }
 
 });
+
+const checks = document.querySelectorAll(".check-item");
+
+window.addEventListener("scroll", ()=>{
+
+ checks.forEach(item=>{
+
+  const top = item.getBoundingClientRect().top;
+
+  if(top < window.innerHeight-100){
+
+      item.classList.add("active");
+
+  }
+
+ });
+
+});
