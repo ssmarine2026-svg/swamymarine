@@ -799,6 +799,82 @@ opacity:1;
 transform:translateX(0);
 }
 
+.scanner-section{
+padding:120px 50px;
+background:#041d2a;
+color:#fff;
+}
+
+.scanner-section h2{
+text-align:center;
+margin-bottom:60px;
+}
+
+.scanner-container{
+display:flex;
+gap:60px;
+align-items:center;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.container-box{
+position:relative;
+max-width:700px;
+overflow:hidden;
+border-radius:12px;
+}
+
+.container-box img{
+width:100%;
+display:block;
+}
+
+.scan-line{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:4px;
+background:#00ffcc;
+box-shadow:0 0 20px #00ffcc;
+animation:scanMove 4s linear infinite;
+z-index:2;
+}
+
+@keyframes scanMove{
+
+0%{
+top:0%;
+}
+
+100%{
+top:100%;
+}
+
+}
+
+.inspection-points{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.point{
+opacity:0;
+transform:translateX(100px);
+padding:15px 25px;
+background:rgba(255,255,255,.08);
+border-left:4px solid #00ffcc;
+border-radius:8px;
+transition:1s;
+}
+
+.point.active{
+opacity:1;
+transform:translateX(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
