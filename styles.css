@@ -872,3 +872,596 @@ padding:40px 20px;
     transition-duration: 0.01ms !important;
   }
 }
+/* =========================================================
+   PREMIUM SERVICE PAGES
+   Applies ONLY to pages with body class="service-page"
+   ========================================================= */
+
+.service-page {
+  background: #f4f9fa;
+  color: #09212d;
+}
+
+/* ---------- TOP NAV ---------- */
+
+.service-page .service-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6vw;
+  background: rgba(4, 42, 61, 0.96);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 10px 35px rgba(0,0,0,.15);
+}
+
+.service-page .service-brand {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+
+.service-page .service-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.service-page .service-nav-links a {
+  color: rgba(255,255,255,.82);
+  font-size: .88rem;
+  font-weight: 700;
+  transition: .25s ease;
+}
+
+.service-page .service-nav-links a:hover {
+  color: #72d7df;
+}
+
+/* ---------- HERO ---------- */
+
+.service-page .sp-hero {
+  position: relative;
+  min-height: 78vh;
+  margin-top: 78px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: #fff;
+  background: #05293a;
+}
+
+.service-page .sp-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.service-page .sp-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: spHeroZoom 16s ease-in-out infinite alternate;
+}
+
+.service-page .sp-hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2,22,34,.94),
+      rgba(3,45,62,.72) 50%,
+      rgba(3,45,62,.20)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(2,22,34,.90),
+      transparent 60%
+    );
+}
+
+@keyframes spHeroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.service-page .sp-hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 1100px);
+  padding: 100px 6vw 85px;
+}
+
+.service-page .sp-label {
+  display: inline-flex;
+  padding: 9px 14px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(114,215,223,.4);
+  border-radius: 50px;
+  background: rgba(114,215,223,.10);
+  color: #72d7df;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.service-page .sp-hero h1 {
+  max-width: 900px;
+  margin: 0 0 24px;
+  color: #fff;
+  font-size: clamp(3rem, 6vw, 6.5rem);
+  line-height: .95;
+}
+
+.service-page .sp-hero-text {
+  max-width: 760px;
+  margin-bottom: 32px;
+  color: rgba(255,255,255,.82);
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+.service-page .sp-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* ---------- GENERAL SECTIONS ---------- */
+
+.service-page .sp-section {
+  padding: clamp(70px, 9vw, 120px) 6vw;
+}
+
+.service-page .sp-section.white {
+  background: #fff;
+}
+
+.service-page .sp-section.light {
+  background: #f4f9fa;
+}
+
+.service-page .sp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-page .sp-kicker {
+  margin-bottom: 12px;
+  color: #0a8793;
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.service-page .sp-section h2 {
+  max-width: 900px;
+  margin-bottom: 22px;
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+}
+
+.service-page .sp-intro {
+  max-width: 850px;
+  color: #637684;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+/* ---------- FEATURE STRIP ---------- */
+
+.service-page .sp-feature-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid rgba(9,33,45,.12);
+  background: #fff;
+}
+
+.service-page .sp-feature {
+  padding: 28px;
+  border-right: 1px solid rgba(9,33,45,.12);
+  text-align: center;
+}
+
+.service-page .sp-feature:last-child {
+  border-right: 0;
+}
+
+.service-page .sp-feature-number {
+  display: block;
+  margin-bottom: 8px;
+  color: #0a8793;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+.service-page .sp-feature strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #09212d;
+}
+
+.service-page .sp-feature span {
+  color: #637684;
+  font-size: .85rem;
+}
+
+/* ---------- SERVICE CARDS ---------- */
+
+.service-page .sp-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 45px;
+}
+
+.service-page .sp-card {
+  position: relative;
+  min-height: 230px;
+  padding: 32px;
+  overflow: hidden;
+  border: 1px solid rgba(9,33,45,.10);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 15px 45px rgba(2,23,32,.08);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.service-page .sp-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 65px rgba(2,23,32,.14);
+}
+
+.service-page .sp-card-number {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  background: #e5f6f7;
+  color: #0a8793;
+  font-weight: 800;
+}
+
+.service-page .sp-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.service-page .sp-card p {
+  margin: 0;
+  color: #637684;
+  line-height: 1.7;
+}
+
+/* ---------- PROCESS ---------- */
+
+.service-page .sp-process {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 45px;
+}
+
+.service-page .sp-process-item {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(9,33,45,.10);
+  transition: .3s ease;
+}
+
+.service-page .sp-process-item:hover {
+  transform: translateX(6px);
+  border-color: rgba(10,135,147,.35);
+}
+
+.service-page .sp-process-icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #063b55;
+  color: #72d7df;
+  font-weight: 800;
+}
+
+.service-page .sp-process-item h3 {
+  margin: 0 0 7px;
+}
+
+.service-page .sp-process-item p {
+  margin: 0;
+  color: #637684;
+  line-height: 1.65;
+}
+
+/* ---------- LOCATION ---------- */
+
+.service-page .sp-location-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.service-page .sp-location {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+  border-radius: 16px;
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(3,45,62,.25), rgba(3,25,38,.95)),
+    linear-gradient(135deg, #0a8793, #063b55);
+  box-shadow: 0 18px 45px rgba(2,23,32,.14);
+  transition: .35s ease;
+}
+
+.service-page .sp-location:hover {
+  transform: translateY(-8px);
+}
+
+.service-page .sp-location span {
+  margin-bottom: 8px;
+  color: #72d7df;
+  font-size: .72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.service-page .sp-location h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.service-page .sp-location p {
+  margin: 7px 0 0;
+  color: rgba(255,255,255,.72);
+  font-size: .88rem;
+}
+
+/* ---------- WHY CHOOSE US ---------- */
+
+.service-page .sp-why {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.service-page .sp-why-visual {
+  position: relative;
+  min-height: 480px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #063b55;
+}
+
+.service-page .sp-why-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  object-fit: cover;
+}
+
+.service-page .sp-why-list {
+  display: grid;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.service-page .sp-why-item {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid rgba(9,33,45,.09);
+}
+
+.service-page .sp-why-check {
+  color: #0a8793;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.service-page .sp-why-item strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.service-page .sp-why-item span {
+  color: #637684;
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+/* ---------- FAQ ---------- */
+
+.service-page .sp-faq {
+  max-width: 950px;
+  margin: 45px auto 0;
+}
+
+.service-page .sp-faq-item {
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(9,33,45,.13);
+}
+
+.service-page .sp-faq-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.service-page .sp-faq-item p {
+  margin: 0;
+  color: #637684;
+  line-height: 1.75;
+}
+
+/* ---------- CTA ---------- */
+
+.service-page .sp-cta-section {
+  padding: 90px 6vw;
+  background: #fff;
+}
+
+.service-page .sp-cta {
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(40px, 6vw, 70px);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(114,215,223,.20), transparent 30%),
+    #063b55;
+  color: #fff;
+}
+
+.service-page .sp-cta h2 {
+  max-width: 750px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.service-page .sp-cta p {
+  max-width: 700px;
+  margin-bottom: 30px;
+  color: rgba(255,255,255,.75);
+  line-height: 1.8;
+}
+
+/* ---------- FOOTER ---------- */
+
+.service-page .sp-footer {
+  padding: 35px 6vw;
+  background: #041d2a;
+  color: rgba(255,255,255,.65);
+  text-align: center;
+  font-size: .85rem;
+}
+
+.service-page .sp-footer a {
+  color: #72d7df;
+}
+
+/* ---------- SCROLL ANIMATION ---------- */
+
+.service-page .sp-reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.service-page .sp-reveal.sp-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 900px) {
+
+  .service-page .service-nav {
+    padding: 0 20px;
+  }
+
+  .service-page .service-nav-links {
+    display: none;
+  }
+
+  .service-page .sp-hero-content {
+    padding: 80px 20px 65px;
+  }
+
+  .service-page .sp-section {
+    padding: 70px 20px;
+  }
+
+  .service-page .sp-feature-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-page .sp-feature {
+    border-bottom: 1px solid rgba(9,33,45,.12);
+  }
+
+  .service-page .sp-card-grid,
+  .service-page .sp-location-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-page .sp-process {
+    grid-template-columns: 1fr;
+  }
+
+  .service-page .sp-why {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .service-page .sp-hero {
+    min-height: 72vh;
+  }
+
+  .service-page .sp-hero h1 {
+    font-size: clamp(2.7rem, 13vw, 4.2rem);
+  }
+
+  .service-page .sp-hero-text {
+    font-size: 1rem;
+  }
+
+  .service-page .sp-feature-strip,
+  .service-page .sp-card-grid,
+  .service-page .sp-location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-page .sp-feature {
+    border-right: 0;
+  }
+
+  .service-page .sp-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .service-page .sp-buttons .btn {
+    width: 100%;
+  }
+
+}
